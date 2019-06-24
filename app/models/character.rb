@@ -1,4 +1,8 @@
-class Character < ActiveRecord::Base
-  belongs_to :show
-  belongs_to :actor
+class CreateCharacters < ActiveRecord::Migration
+  def change
+    create_table :characters do |t|
+      t.string :name
+      t.integer :show_id
+    end
+  end
 end
